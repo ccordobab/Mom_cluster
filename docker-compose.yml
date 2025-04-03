@@ -1,0 +1,16 @@
+version: "3"
+services:
+  node1:
+    build: .
+    ports:
+      - "8000:8000"
+
+  node2:
+    build: .
+    ports:
+      - "8001:8000"
+
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
