@@ -1,16 +1,27 @@
-version: "3"
-services:
-  node1:
-    build: .
-    ports:
-      - "8000:8000"
+version: '3.8'
 
-  node2:
+services:
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  mom_node_1:
     build: .
+    restart: always
     ports:
       - "8001:8000"
 
-  redis:
-    image: redis
+  mom_node_2:
+    build: .
+    restart: always
     ports:
-      - "6379:6379"
+      - "8002:8000"
+
+  mom_node_3:
+    build: .
+    restart: always
+    ports:
+      - "8003:8000"
+

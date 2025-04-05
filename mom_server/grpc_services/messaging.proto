@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package messaging;
+
+service MessagingService {
+    rpc ReplicateMessage (MessageRequest) returns (MessageResponse);
+}
+
+message MessageRequest {
+    string topic_name = 1;
+    string sender = 2;
+    string content = 3;
+}
+
+message MessageResponse {
+    string status = 1;
+}
