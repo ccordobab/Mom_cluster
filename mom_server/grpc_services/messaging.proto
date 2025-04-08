@@ -4,6 +4,13 @@ package messaging;
 
 service MessagingService {
     rpc ReplicateMessage (MessageRequest) returns (MessageResponse);
+    rpc CreateTopic (TopicRequest) returns (TopicResponse);
+    rpc DeleteTopic (TopicRequest) returns (TopicResponse);
+    rpc ListTopics (EmptyRequest) returns (TopicsListResponse);
+    rpc CreateQueue (QueueRequest) returns (QueueResponse);
+    rpc DeleteQueue (QueueRequest) returns (QueueResponse);
+    rpc ListQueues (EmptyRequest) returns (QueuesListResponse);
+    rpc SendMessageToQueue (QueueMessageRequest) returns (MessageResponse);
 }
 
 message MessageRequest {
@@ -14,4 +21,41 @@ message MessageRequest {
 
 message MessageResponse {
     string status = 1;
+}
+
+message TopicRequest {
+    string name = 1;
+    string owner = 2;
+}
+
+message TopicResponse {
+    string status = 1;
+    string message = 2;
+}
+
+message EmptyRequest {
+}
+
+message TopicsListResponse {
+    repeated string topics = 1;
+}
+
+message QueueRequest {
+    string name = 1;
+    string owner = 2;
+}
+
+message QueueResponse {
+    string status = 1;
+    string message = 2;
+}
+
+message QueuesListResponse {
+    repeated string queues = 1;
+}
+
+message QueueMessageRequest {
+    string queue_name = 1;
+    string sender = 2;
+    string content = 3;
 }

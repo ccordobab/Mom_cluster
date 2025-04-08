@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(mom_server/grpc_services/messaging.proto\x12\tmessaging\"E\n\x0eMessageRequest\x12\x12\n\ntopic_name\x18\x01 \x01(\t\x12\x0e\n\x06sender\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"!\n\x0fMessageResponse\x12\x0e\n\x06status\x18\x01 \x01(\t2]\n\x10MessagingService\x12I\n\x10ReplicateMessage\x12\x19.messaging.MessageRequest\x1a\x1a.messaging.MessageResponseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n(mom_server/grpc_services/messaging.proto\x12\tmessaging\"E\n\x0eMessageRequest\x12\x12\n\ntopic_name\x18\x01 \x01(\t\x12\x0e\n\x06sender\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\"!\n\x0fMessageResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\"+\n\x0cTopicRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05owner\x18\x02 \x01(\t\"0\n\rTopicResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\"\x0e\n\x0c\x45mptyRequest\"$\n\x12TopicsListResponse\x12\x0e\n\x06topics\x18\x01 \x03(\t\"+\n\x0cQueueRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05owner\x18\x02 \x01(\t\"0\n\rQueueResponse\x12\x0e\n\x06status\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\t\"$\n\x12QueuesListResponse\x12\x0e\n\x06queues\x18\x01 \x03(\t\"J\n\x13QueueMessageRequest\x12\x12\n\nqueue_name\x18\x01 \x01(\t\x12\x0e\n\x06sender\x18\x02 \x01(\t\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t2\xc3\x04\n\x10MessagingService\x12I\n\x10ReplicateMessage\x12\x19.messaging.MessageRequest\x1a\x1a.messaging.MessageResponse\x12@\n\x0b\x43reateTopic\x12\x17.messaging.TopicRequest\x1a\x18.messaging.TopicResponse\x12@\n\x0b\x44\x65leteTopic\x12\x17.messaging.TopicRequest\x1a\x18.messaging.TopicResponse\x12\x44\n\nListTopics\x12\x17.messaging.EmptyRequest\x1a\x1d.messaging.TopicsListResponse\x12@\n\x0b\x43reateQueue\x12\x17.messaging.QueueRequest\x1a\x18.messaging.QueueResponse\x12@\n\x0b\x44\x65leteQueue\x12\x17.messaging.QueueRequest\x1a\x18.messaging.QueueResponse\x12\x44\n\nListQueues\x12\x17.messaging.EmptyRequest\x1a\x1d.messaging.QueuesListResponse\x12P\n\x12SendMessageToQueue\x12\x1e.messaging.QueueMessageRequest\x1a\x1a.messaging.MessageResponseb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -35,6 +35,22 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_MESSAGEREQUEST']._serialized_end=124
   _globals['_MESSAGERESPONSE']._serialized_start=126
   _globals['_MESSAGERESPONSE']._serialized_end=159
-  _globals['_MESSAGINGSERVICE']._serialized_start=161
-  _globals['_MESSAGINGSERVICE']._serialized_end=254
+  _globals['_TOPICREQUEST']._serialized_start=161
+  _globals['_TOPICREQUEST']._serialized_end=204
+  _globals['_TOPICRESPONSE']._serialized_start=206
+  _globals['_TOPICRESPONSE']._serialized_end=254
+  _globals['_EMPTYREQUEST']._serialized_start=256
+  _globals['_EMPTYREQUEST']._serialized_end=270
+  _globals['_TOPICSLISTRESPONSE']._serialized_start=272
+  _globals['_TOPICSLISTRESPONSE']._serialized_end=308
+  _globals['_QUEUEREQUEST']._serialized_start=310
+  _globals['_QUEUEREQUEST']._serialized_end=353
+  _globals['_QUEUERESPONSE']._serialized_start=355
+  _globals['_QUEUERESPONSE']._serialized_end=403
+  _globals['_QUEUESLISTRESPONSE']._serialized_start=405
+  _globals['_QUEUESLISTRESPONSE']._serialized_end=441
+  _globals['_QUEUEMESSAGEREQUEST']._serialized_start=443
+  _globals['_QUEUEMESSAGEREQUEST']._serialized_end=517
+  _globals['_MESSAGINGSERVICE']._serialized_start=520
+  _globals['_MESSAGINGSERVICE']._serialized_end=1099
 # @@protoc_insertion_point(module_scope)

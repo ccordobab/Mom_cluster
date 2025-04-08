@@ -1,0 +1,16 @@
+localhost:50052:topic3509:topic
+localhost:50051:topic3509:topic
+localhost:50052:topic3509:topic
+localhost:50053:topic3509:topic
+localhost:50051:topic3509:topic
+localhost:50053:topic3509:topic
+localhost:50052:topic3509:topic
+localhost:50053:topic3509:topic
+localhost:50052:queue3509:queue
+localhost:50051:queue3509:queue
+localhost:50052:queue3509:queue
+localhost:50053:queue3509:queue
+localhost:50051:queue3509:queue
+localhost:50053:queue3509:queue
+localhost:50052:queue3509:queue
+localhost:50053:queue3509:queue
