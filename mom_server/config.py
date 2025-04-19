@@ -3,7 +3,7 @@ import json
 import logging
 from dotenv import load_dotenv
 
-# Cargar variables de entorno desde un archivo .env específico (usa ENV_FILE para elegir)
+# Código existente se mantiene
 env_file = os.getenv("ENV_FILE", ".env.node1")
 load_dotenv(dotenv_path=env_file)
 
@@ -58,6 +58,12 @@ logger.info(f"NODE_MAP: {NODE_MAP}")
 SELF_HOST = os.getenv("SELF_HOST", "localhost:8000")
 logger.info(f"SELF_HOST: {SELF_HOST}")
 
+# NUEVAS CONFIGURACIONES PARA PARTICIONAMIENTO
+PARTITIONING_ENABLED = os.getenv("PARTITIONING_ENABLED", "true").lower() == "true"
+PARTITION_REPLICATION_FACTOR = int(os.getenv("PARTITION_REPLICATION_FACTOR", "2"))
+logger.info(f"Particionamiento habilitado: {PARTITIONING_ENABLED}")
+logger.info(f"Factor de replicación: {PARTITION_REPLICATION_FACTOR}")
+
 def api_to_grpc_address(api_address):
     if not api_address:
         return None
@@ -82,5 +88,8 @@ def get_config():
         "secret_key": SECRET_KEY,
         "access_token_expire_minutes": ACCESS_TOKEN_EXPIRE_MINUTES,
         "database_url": DATABASE_URL,
-        "redis_url": REDIS_URL
+        "redis_url": REDIS_URL,
+        # Nuevos campos de configuración
+        "partitioning_enabled": PARTITIONING_ENABLED,
+        "partition_replication_factor": PARTITION_REPLICATION_FACTOR
     }
