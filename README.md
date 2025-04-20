@@ -62,8 +62,8 @@ Toda la información del análisis, diseño e implementación está ampliada en 
 │                     MOM Cluster                        │ 
 │  ┌──────────┐  gRPC  ┌──────────┐  gRPC  ┌──────────┐  │
 │  │  Nodo 1  │◄──────►│  Nodo 2  │◄──────►│  Nodo 3  │  │
-│  │API+gRPC+│         │API+gRPC+ │        │API+gRPC+ │  │
-│  │SQLite   │         │SQLite    │        │SQLite    │  │
+│  │API+gRPC+ │        │API+gRPC+ │        │API+gRPC+ │  │
+│  │SQLite    │        │SQLite    │        │SQLite    │  │
 │  └──────────┘        └──────────┘        └──────────┘  │
 └────────────────────────────────────────────────────────┘
 ```
